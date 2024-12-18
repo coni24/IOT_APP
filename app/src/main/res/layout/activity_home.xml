@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Icono Menú -->
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="26dp" />
+
+
+    <!-- Icono Usuario -->
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/person"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="26dp" />
+
+    <!-- Texto Bienvenida -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido a,"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/menu_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="26dp" />
+
+    <!-- Texto ECOHOGAR -->
+    <TextView
+        android:id="@+id/ecohogar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ECOHOGAR"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="26dp" />
+
+    <!-- Texto Opciones -->
+    <TextView
+        android:id="@+id/opciones_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opciones"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/ecohogar_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="26dp" />
+
+    <!-- Tarjeta Temperatura -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_temperatura"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:background="#0C1F14"
+        app:layout_constraintTop_toBottomOf="@id/opciones_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/icon_temperatura"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/temp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/text_temperatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                />
+
+            <Switch
+                android:id="@+id/switch_ventilado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tarjeta Ventilador -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ventilador"
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        android:background="#F7F5F2"
+        app:layout_constraintTop_toBottomOf="@id/opciones_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/icon_ventilador"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/fan"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/text_ventilador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ventilador"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <Switch
+                android:id="@+id/switch_ventilador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Barra de Navegación Inferior -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            android:background="@android:color/transparent"
+            app:tint="#BDDFC5" />
+
+        <ImageButton
+            android:id="@+id/nav_temperature"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/temp"
+            android:background="@android:color/transparent"
+            app:tint="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/person"
+            android:background="@android:color/transparent"
+            app:tint="#FFFFFF" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

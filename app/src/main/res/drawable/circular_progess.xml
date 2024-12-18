@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo Gris Claro -->
+    <item>
+        <shape android:shape="ring"
+            android:innerRadius="80dp"
+            android:thickness="10dp"
+            android:useLevel="false">
+            <solid android:color="#EDEDED"/>
+        </shape>
+    </item>
+
+    <!-- Barra Progresiva Verde -->
+    <item>
+        <rotate
+            android:fromDegrees="-90"
+            android:toDegrees="270">
+            <shape android:shape="ring"
+                android:innerRadius="80dp"
+                android:thickness="10dp"
+                android:useLevel="true">
+                <solid android:color="#0C1F14"/>
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>
